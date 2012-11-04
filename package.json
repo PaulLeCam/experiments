@@ -1,0 +1,41 @@
+{
+  "name": "experiments",
+  "version": "0.0.0",
+  "description": "Experiments",
+  "main": "lib/app.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec",
+    "test-watch": "node_modules/.bin/mocha --watch --reporter min",
+    "build": "node_modules/.bin/coffee --compile --bare --output lib server",
+    "build-watch": "node_modules/.bin/coffee --compile --bare --watch --output lib server",
+    "client-watch": "node_modules/.bin/coffee --compile --watch --output www client",
+    "server-watch": "DEBUG='* -connect:dispatcher -send' node_modules/.bin/node-dev server/app.coffee"
+  },
+  "dependencies": {
+    "delorean": "*",
+    "seaport": "1.1",
+    "redis": "0.8",
+    "express": "3.0",
+    "debug": "0.7",
+    "jade": "0.27",
+    "stylus": "0.29",
+    "monk": "0.7",
+    "bcrypt": "~0.7.3",
+    "everyauth": "~0.3.1",
+    "connect-redis": "~1.4.5"
+  },
+  "devDependencies": {
+    "codo": "1",
+    "coffee-script": "1.4",
+    "mocha": "1",
+    "should": "1.1",
+    "node-dev": "0.2",
+    "grunt": "~0.3.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaulLeCam/experiments.git"
+  },
+  "author": "Paul Le Cam <paul@kontestapp.com> (@paul_lecam)",
+  "license": "MIT"
+}
